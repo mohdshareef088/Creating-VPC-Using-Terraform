@@ -1,9 +1,6 @@
-Here you go, Mohammed — a **clean, simple, interview‑ready README** for your GitHub repo  
-**Creating‑VPC‑Using‑Terraform**.
 
-It’s short, professional, and explains your project clearly without overwhelming the interviewer.
 
----
+
 
 # **Creating VPC Using Terraform**
 
