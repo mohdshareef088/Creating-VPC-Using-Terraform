@@ -60,8 +60,17 @@ resource "aws_security_group" "mysg" {
 }
 
 resource "aws_s3_bucket" "example" {
-  bucket = "vpc-bucket-testing-02"
+  bucket = "testing-4-vpc"
 }
+
+terraform {
+  backend "s3" {
+    bucket = "testing-4-vpc"
+    key    = "terraform/state.tfstate"
+    region = "ap-south-1"
+  }
+}
+
 resource "aws_instance" "vpc-webserver" {
   ami           = "ami-01a00762f46d584a1"
   instance_type = "t3.micro"
