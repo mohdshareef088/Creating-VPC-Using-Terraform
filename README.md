@@ -1,4 +1,7 @@
 
+## 📘 Architecture Diagram
+
+![VPC Architecture](architecture_diagram.png)
 
 
 
