@@ -1,5 +1,4 @@
 
-Terraform AWS Project — VPC, EC2, and Application Load Balancer
 This project provisions a complete AWS infrastructure using Terraform, including:
 	• Custom VPC
 	• Public subnets across two AZs
@@ -78,7 +77,5 @@ You should see responses from both EC2 instances.
 🧪 Testing
 
 
-	• Stop one EC2 instance → ALB routes traffic to the other
-	• Modify user‑data → Terraform detects drift
-	• Scale EC2 count → ALB automatically balances traffic
+
 
