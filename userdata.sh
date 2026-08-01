@@ -32,7 +32,7 @@ cat <<EOT > /var/www/html/index.html
 <body>
   <h1>Terraform Project Server 1</h1>
   <h2>Instance ID: <span style="color:green">$INSTANCE_ID</span></h2>
-  <p>Welcome to Mohammed Sample Project</p>
+  <p>Welcome to Mohammed's Sample Project</p>
   
 </body>
 </html>
