@@ -82,7 +82,9 @@ The ALB DNS distributes traffic between both servers.
 
 <img width="757" height="524" alt="image" src="https://github.com/user-attachments/assets/4acb0e83-f83d-4db8-b3d4-d7b59b5e5905" />
 
-<img width="746" height="536" alt="image" src="https://github.com/user-attachments/assets/75e0dbbd-435e-4818-9bee-351507e2e86f" />
+
+
+<img width="759" height="322" alt="image" src="https://github.com/user-attachments/assets/1e53f0db-a646-4c1c-b9b4-89ed41fbffc5" />
 
 ---
 
