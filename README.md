@@ -54,6 +54,7 @@ terraform init
 terraform validate
 terraform plan
 terraform apply -auto-approve
+terraform destroy
 ```
 1. Configure AWS credentials.
 2. Create an S3 bucket for remote state storage.
@@ -66,6 +67,7 @@ terraform apply -auto-approve
 9. Each EC2 runs a separate user‑data script that installs Apache and serves a custom HTML page.  
 10. The ALB distributes traffic across both EC2 instances.  
 11. Health checks ensure only healthy instances receive traffic.
+12. End with command to destroy.
    
 
 ---
