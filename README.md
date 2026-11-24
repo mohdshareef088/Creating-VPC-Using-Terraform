@@ -10,8 +10,31 @@
 This project demonstrates how to build a complete AWS VPC architecture using Terraform. It includes networking components, security layers, EC2 instances, and an Application Load Balancer — all deployed automatically through Infrastructure as Code (IaC).
 
 ---
+---
+## **📁 Project Structure**
 
-## **📌 What This Project Builds**
+```
+backend.tf
+│main.tf
+│variables.tf
+│providers.tf
+│userdata.sh
+│userdata2.sh
+│terraform.tfstate
+
+```
+---
+## **🧩 Tools Used**
+
+- **Terraform** (Infrastructure as Code)  
+- **AWS VPC, Subnets, IGW, Route Tables**  
+- **EC2 Instances**  
+- **Application Load Balancer**  
+- **Security Groups**  
+- **User‑data scripts (Bash)**
+--- 
+## **📌 Project Builds and Deploy**
+
 
 - A custom **VPC**  
 - Two **public subnets** across different Availability Zones  
@@ -22,47 +45,32 @@ This project demonstrates how to build a complete AWS VPC architecture using Ter
 - An **Application Load Balancer (ALB)**  
 - A **Target Group** with health checks  
 - ALB → EC2 **traffic forwarding**  
-- S3 bucket (optional component)
-
+- S3 bucket remote backend
 ---
 
-## **🚀 How It Works**
-
-1. Terraform provisions the VPC and networking resources.  
-2. Two EC2 instances are launched in separate subnets.  
-3. Each EC2 runs a user‑data script that installs Apache and serves a custom HTML page.  
-4. The ALB distributes traffic across both EC2 instances.  
-5. Health checks ensure only healthy instances receive traffic.
-
----
-
-## **🧩 Technologies Used**
-
-- **Terraform** (Infrastructure as Code)  
-- **AWS VPC, Subnets, IGW, Route Tables**  
-- **EC2 Instances**  
-- **Application Load Balancer**  
-- **Security Groups**  
-- **User‑data scripts (Bash)**
-
----
-
-## **📁 Project Structure**
-
+## **🚀 Executions Steps**
 ```
-main.tf
-variables.tf
-providers.tf
-userdata.sh
-userdata2.sh
-terraform.tfstate
-terraform.tfstate.backup
+terraform init
+terraform validate
+terraform plan
+terraform apply -auto-approve
 ```
+1. Configure AWS credentials.
+2. Create an S3 bucket for remote state storage.
+3. Configure the Terraform S3 backend.
+4. Run terraform init to initialize the backend.
+5. Terraform stores and manages the terraform.tfstate file in S3.
+6. Run terraform plan to review infrastructure changes.
+7. Run terraform apply to provision AWS resources.Terraform provisions the VPC and networking resources.  
+8. Two EC2 instances are launched in separate subnets.  
+9. Each EC2 runs a separate user‑data script that installs Apache and serves a custom HTML page.  
+10. The ALB distributes traffic across both EC2 instances.  
+11. Health checks ensure only healthy instances receive traffic.
+   
 
 ---
 
-## **📸 Demo Output**
-
+## **🌐Screenshots-Access the Application**
 Each EC2 instance serves a webpage showing:
 
 - Server name  
@@ -70,40 +78,11 @@ Each EC2 instance serves a webpage showing:
 - Custom message  
 
 The ALB DNS distributes traffic between both servers.
-
 ---
 
-## **🎯 What This Project Demonstrates**
+<img width="757" height="524" alt="image" src="https://github.com/user-attachments/assets/4acb0e83-f83d-4db8-b3d4-d7b59b5e5905" />
 
-- Ability to design AWS networking from scratch  
-- Understanding of Terraform resource dependencies  
-- Real‑world ALB + EC2 architecture  
-- Automation using user‑data  
-- Clean, modular IaC structure  
-- Practical cloud deployment skills
-
----
-
-## **📦 How to Deploy**
-
-```
-terraform init
-terraform validate
-terraform plan
-terraform apply -auto-approve
-```
-
----
-
-## **🌐 Access the Application**
-
-After deployment, Terraform outputs the ALB DNS:
-
-```
-http://<your-alb-dns-name>
-```
-
-Open it in a browser to see the web servers responding.
+<img width="746" height="536" alt="image" src="https://github.com/user-attachments/assets/75e0dbbd-435e-4818-9bee-351507e2e86f" />
 
 ---
 
